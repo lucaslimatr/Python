@@ -9,7 +9,7 @@ while op != 5:
     [3] maior
     [4] novos números
     [5] sair do programa''')
-    op = int(input('>>>Qual é a operação que deseja? '))
+    op = int(input('>>> Qual é a operação que deseja? '))
     if op == 1:
         r = n1 + n2
         print('O resultado de {} + {} é {}.'.format(n1, n2, r))
