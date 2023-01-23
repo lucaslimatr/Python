@@ -20,6 +20,3 @@ while not n:
         n = False
 media = soma / cont
 print('A média de todos os valores é {}.\nO maior número foi {}.\nO menor número foi {}. '.format(media, maior, menor))
-
-
-    
