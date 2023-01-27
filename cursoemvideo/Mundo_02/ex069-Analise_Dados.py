@@ -10,11 +10,11 @@ while True:
     print('~' * 20)
     if idade > 18:
         cont18 += 1
-    elif sexo == 'M':
+    if sexo == 'M':
         homem += 1
-    elif sexo == 'F':
+    if sexo == 'F':
         if idade < 20:
             mulher += 1
-    elif continuar == 'N':
+    if continuar == 'N':
         break      
 print(f'Neste cadastro, {cont18} pessoas são maiores de 18 anos, tiveram {homem} homens e {mulher} mulheres tem menos de 20 anos')
