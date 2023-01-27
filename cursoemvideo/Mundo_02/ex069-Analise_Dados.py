@@ -7,12 +7,12 @@ while True:
     nome = input('Digite o nome: ')
     idade = int(input('Digite a idade: '))
     sexo = input('Informe o sexo [M/F]: ').upper().strip()[0]
-    while sexo not in ['M', 'F']:
+    while sexo not in 'MF':
         print('Opção inválida')
         sleep(1)
         sexo = input('Informe o sexo [M/F]: ').upper().strip()[0]
     continuar = input('Deseja continuar? [S/N]: ').upper().strip()[0]
-    while continuar not in ['S', 'N']:
+    while continuar not in  'SN':
         print('Opção inválida')
         sleep(1)
         continuar = input('Deseja continuar? [S/N]: ').upper().strip()[0]
