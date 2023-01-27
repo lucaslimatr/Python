@@ -5,5 +5,4 @@ while True:
         break
     cont += 1
     soma += num
-    
 print(f'Foram digitados {cont} números e a soma deles é {soma}.')

@@ -1,3 +1,4 @@
+from time import sleep
 nome = idade = sexo = continuar = cont18 = homem = mulher = 0
 print('~' * 20)
 print('CADASTRO DE PESSOAS')
@@ -6,7 +7,15 @@ while True:
     nome = input('Digite o nome: ')
     idade = int(input('Digite a idade: '))
     sexo = input('Informe o sexo [M/F]: ').upper().strip()[0]
+    while sexo not in ['M', 'F']:
+        print('Opção inválida')
+        sleep(1)
+        sexo = input('Informe o sexo [M/F]: ').upper().strip()[0]
     continuar = input('Deseja continuar? [S/N]: ').upper().strip()[0]
+    while continuar not in ['S', 'N']:
+        print('Opção inválida')
+        sleep(1)
+        continuar = input('Deseja continuar? [S/N]: ').upper().strip()[0]
     print('~' * 20)
     if idade > 18:
         cont18 += 1
