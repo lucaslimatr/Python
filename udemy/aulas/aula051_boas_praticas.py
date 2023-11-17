@@ -2,6 +2,7 @@
 CONSTANTE = "Variáveis" que não vão mudar
 Muitas condições no mesmo if (ruim)
     <- Contagem de complexidade (ruim)
+Usar as variáveis para deixar o código mais limpo
 """
 velocidade = 61  # velocidade atual do carro
 local_carro = 100  # local em que o carro está na estrada
