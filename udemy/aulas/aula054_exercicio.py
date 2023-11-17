@@ -4,18 +4,18 @@ informe se este número é par ou ímpar. Caso o usuário não digite um número
 inteiro, informe que não é um número inteiro.
 """
 
-# numero = input('Digite um número inteiro: ')
+numero = input('Digite um número inteiro: ')
 
-# try:
-#     numero_int = int(numero)
-#     teste_par_impar = numero_int % 2 == 0
+try:
+    numero_int = int(numero)
+    teste_par_impar = numero_int % 2 == 0
 
-#     if teste_par_impar:
-#         print(f'O número {numero_int} é par.')
-#     else:
-#         print(f'O número {numero_int} é ímpar.')
-# except:
-#     print(f'{numero} não é um número inteiro.')
+    if teste_par_impar:
+        print(f'O número {numero_int} é par.')
+    else:
+        print(f'O número {numero_int} é ímpar.')
+except:
+    print(f'{numero} não é um número inteiro.')
 
 """
 Faça um programa que pergunte a hora ao usuário e, baseando-se no horário 
