@@ -30,8 +30,7 @@ while True:
     except:
         print('Operação inválida!')
     
-    continuar = input('Deseja continuar? [S/N] = ')
-    continuar = continuar.upper()
-    if continuar == 'N':
+    continuar = input('Deseja continuar? [S/N] = ').upper().startswith('N')
+    if continuar:
         break
 print('Fim')
