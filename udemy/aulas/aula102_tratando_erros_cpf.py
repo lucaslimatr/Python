@@ -4,29 +4,41 @@
 #     .replace(' ', '') \
 #     .replace('-', '')
 import re # Módulo Regular Expression
+import sys
+
 entrada = input('Digite seu CPF: ')
 cpf_recebido = re.sub(
     r'[^0-9]',
     '',
     entrada
 )
+# Checar se a entrada são números repetidos
+entrada_sequencial = entrada == entrada[0] * len(entrada)
+
+if entrada_sequencial:
+     print('Dados sequenciais')
+     sys.exit()
+
 print(f'CPF tratado: {cpf_recebido}')
+
 # Validador do primeiro dígito
 cpf = cpf_recebido[:9]
 multiplicador = 10
 soma = 0
 resultado = 0
 primeiro_digito = 0
+
 for n in cpf:
     num_cpf = int(n) * multiplicador
     multiplicador -= 1
     soma = soma + num_cpf
     print(f'Número do CPF:', num_cpf,f'Soma:', soma)
+
 resultado = (soma * 10) % 11
 print(f'Resultado:', resultado)
 
 primeiro_digito = resultado if resultado < 9 else 0
-print(F'Primeiro Digito:', primeiro_digito)
+print(f'Primeiro Digito:', primeiro_digito)
 
 # Validador do segundo dígito
 cpf_2 = cpf_recebido[:10] # Apenas alterei o fatiamento de 9 para 10
@@ -34,16 +46,18 @@ multiplicador_2 = 11 # Apenas alterei o multiplicador de 10 para 11
 soma_2 = 0
 resultado_2 = 0
 segundo_digito = 0 # Alterei o nome da variável
-for n in cpf_2:
-    num_cpf = int(n) * multiplicador_2
+
+for n2 in cpf_2:
+    num_cpf_2 = int(n2) * multiplicador_2
     multiplicador_2 -= 1
-    soma_2 = soma_2 + num_cpf
-    print(f'Número do CPF:', num_cpf,f'Soma:', soma_2)
-resultado = (soma_2 * 10) % 11
+    soma_2 = soma_2 + num_cpf_2
+    print(f'Número do CPF:', num_cpf_2,f'Soma:', soma_2)
+
+resultado_2 = (soma_2 * 10) % 11
 print(f'Resultado:', resultado_2)
 
 segundo_digito = resultado_2 if resultado_2 < 9 else 0
-print(F'Segundo Digito:', segundo_digito)
+print(f'Segundo Digito:', segundo_digito)
 
 # Validador do CPF 
 validacao = f'{cpf}{primeiro_digito}{segundo_digito}'
